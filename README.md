@@ -10,7 +10,10 @@ Polls app, where you can create polls, modify them and vote!
 - cd Django_polls_app
 - cd clasic_app 
 - py manage.py createsuperuser
-- `create your admin user(mail is not necesery)`
+- - create your admin user(mail is not necesery)
 - py manage.py runserver
 
 Ready!
+
+## Creating polls
+To create your polls go to '127.0.0.1:8000/admin/' and feel free to explore :)
