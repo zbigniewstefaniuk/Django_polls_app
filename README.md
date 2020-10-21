@@ -9,6 +9,8 @@ Polls app, where you can create polls, modify them and vote!
 - git clone https://github.com/zbigniewstefaniuk/Django_polls_app
 - cd Django_polls_app
 - cd clasic_app 
+- py manage.py createsuperuser
+- `create your admin user(mail is not necesery)`
 - py manage.py runserver
 
 Ready!
