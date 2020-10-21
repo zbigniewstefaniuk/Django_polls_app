@@ -1,6 +1,8 @@
-### Django polls app
+# Django polls app
+Polls app, where you can create polls, modify them and vote!
 
-# instal 
+
+# Instructions
 - python -m venv venv 
 - venv\Scripts\activate.ps1
 - pip install django 
