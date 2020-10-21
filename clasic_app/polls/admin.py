@@ -16,7 +16,17 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information', {'fields': [
          'pub_date'], 'classes': ['collapse']}),
     ]
+
     inlines = [ChoiceInline]
+
+    # This line add info about polls: timestamp and if it was created recelny => bool
+    list_display = ('question_text', 'pub_date', 'was_published_recently')
+
+    # displaying deafult django filters for published date
+    list_filter = ['pub_date']
+    
+    # added search form for better UX and faster and precise searching/filtering
+    search_fields = ['question_text']
 
 
 admin.site.register(Question, QuestionAdmin)
