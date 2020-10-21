@@ -1,16 +1,9 @@
-{% load static %}
+{% extends 'polls/layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block title %}Polls{% endblock title %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-    <title>Polls</title>
-</head>
+{% block body %}
 
-<body>
     {% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
@@ -20,6 +13,5 @@
     {% else %}
     <p>No polls are available</p>
     {% endif %}
-</body>
 
-</html>
+{% endblock body %}

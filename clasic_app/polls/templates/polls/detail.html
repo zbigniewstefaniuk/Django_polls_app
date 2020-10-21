@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'polls/layout.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>details</title>
-</head>
+{% block title %}Details{% endblock title %}
 
-<body>
-    <h1>{{ question.question_text }}</h1>
+{% block body %}
+<h1>{{ question.question_text }}</h1>
 
-    {% if error_message %}
-    <p><strong> {{ error_message }} </strong></p>
-    {% endif %}
+{% if error_message %}
+<p><strong> {{ error_message }} </strong></p>
+{% endif %}
 
-    <form action="{% url 'polls:vote' question.id %}" method="post">
-        {% csrf_token %}
+<form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
 
-        {% for choice in question.choice_set.all %}
+    {% for choice in question.choice_set.all %}
+    <div class="vote-nodes">
         <input type="radio" name="choice" id="choice{{ forloop.counter}}" value="{{ choice.id }}">
         <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-        {% endfor %}
-        <input type="submit" value="Vote">
-    </form>
-</body>
+    </div>
 
-</html>
+    {% endfor %}
+    <input type="submit" value="Vote" id="submit-btn">
+</form>
+{% endblock body %}

@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'polls/layout.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
+
+{% block title %}
+Results
+{% endblock title %}
+
 </head>
 
-<body>
-    <h1>{{ question.question_txt }}</h1>
-    <ul>
+{% block body %}
+<h1>{{ question.question_text }}</h1>
+<ul>
 
-        {% for choice in question.choice_set.all  %}
+    {% for choice in question.choice_set.all  %}
+    <div class="vote-nodes-results">
         <li>
-            {{ choice.choice_txt }} -- {{ choice.votes }} vote {{ choice.votes|pluralize }}
+            {{ choice.choice_text }} - {{ choice.votes }} vote{{ choice.votes|pluralize }}
         </li>
-        {% endfor %}
+    </div>
+    {% endfor %}
 
-    </ul>
-
+</ul>
+<div class="vote-again">
     <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-</body>
+</div>
 
-</html>
+{% endblock body %}
