@@ -1,11 +1,11 @@
-# Django polls app
+<h1 align='center'>Django polls app</h1>
 
-Polls app, where you can create polls, modify them and vote!
+<p align='center'>Polls app, where you can create polls, modify them and vote!</p>
 
 <p align="center">
   <img  src="https://github.com/zbigniewstefaniuk/zbigniewstefaniuk/blob/master/polls-app.png">
 </p>
-example photo
+<p align='center'>example photo</p>
 
 # Instructions
 
