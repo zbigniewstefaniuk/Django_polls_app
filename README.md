@@ -1,7 +1,8 @@
 <h1 align='center'>Django polls app</h1>
 
 <p align='center'>Polls app, where you can create polls, modify them and vote!</p>
-<p>DEMO WILL BE HERE</p>
+<h2 align="center"><a href="#">Demo</a></h2>
+<br />
 <p align="center">
   <img  src="https://github.com/zbigniewstefaniuk/zbigniewstefaniuk/blob/master/polls-app.png">
 </p>
